@@ -1,0 +1,23 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring_security
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    jwt:
+      secret-key: H#hs{9Yi#@up8$#)9^68(c60_
+      token-validity: 86400000 # 1 day in milliseconds
+server:
+  port: 8080
+
